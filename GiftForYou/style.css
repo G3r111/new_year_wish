@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff; /* Updated to plain white */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Confetti background */
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('snowflake.png') repeat;
+    background-size: 50px 50px; /* Resize the confetti image */
+    animation: fall 5s linear infinite;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+@keyframes fall {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+/* Card styling */
+.card {
+    width: 400px;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.card h1 {
+    font-size: 2rem;
+    color: #ff6600;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+}
